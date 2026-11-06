@@ -38,3 +38,12 @@ body.viewer-mode{background:#0c1728}
 .viewer-expanded-body img{display:block;max-width:100%;max-height:55vh;object-fit:contain;margin:24px auto 0;border-radius:12px}
 .viewer-expanded-empty{color:#aabbd1;font-size:20px}
 @media(max-width:700px){.viewer-content{width:90vw}.viewer-expanded-header{padding:22px;flex-direction:column}.viewer-expanded-body{padding:22px}.viewer-expanded{width:96vw}}
+
+/* 노드 분류 보조 라벨을 편집/촬영 화면 모두에서 완전히 숨김 */
+.map .node small,.map .node .node-level,.map .node .node-meta,.map .node [data-level]{display:none!important}
+/* 촬영 중 우측 하단 이미지 클릭 시 사진만 중앙에서 크게 표시 */
+.viewer-content img{cursor:zoom-in}
+.viewer-image-dialog{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:94vw;max-height:94vh;gap:12px}
+.viewer-image-dialog img{display:block;max-width:92vw;max-height:83vh;width:auto;height:auto;object-fit:contain;border-radius:12px;box-shadow:0 25px 90px #000a}
+.viewer-image-close{position:absolute;right:0;top:-48px;background:#1b3558}
+.viewer-image-title{color:#f7f4ed;font-weight:700;font-size:18px;text-align:center}

@@ -36,6 +36,18 @@ function expandViewerContent(){
   document.body.append(overlay);
   overlay.querySelector('.viewer-expanded-close').focus();
 }
+function expandViewerImage(){
+  if(!viewerMode||!current||!selected)return;
+  const n=getNode(selected);if(!n?.image)return;
+  closeViewerExpanded();
+  const overlay=document.createElement('div');
+  overlay.className='viewer-expanded-backdrop viewer-image-backdrop';
+  overlay.innerHTML=`<section class="viewer-image-dialog" role="dialog" aria-modal="true" aria-label="${esc(n.title)} 이미지 확대"><button type="button" class="viewer-expanded-close viewer-image-close" aria-label="이미지 확대 닫기">✕ 닫기</button><img src="${n.image}" alt="${esc(n.title)} 첨부 이미지"><div class="viewer-image-title">${esc(n.title)}</div></section>`;
+  overlay.addEventListener('click',e=>{if(e.target===overlay)closeViewerExpanded()});
+  overlay.querySelector('.viewer-image-close').onclick=closeViewerExpanded;
+  document.body.append(overlay);
+  overlay.querySelector('.viewer-image-close').focus();
+}
 function showViewerContent(){
   document.querySelector('.viewer-content')?.remove();
   closeViewerExpanded();
@@ -44,7 +56,7 @@ function showViewerContent(){
   const panel=document.createElement('button');panel.type='button';panel.className='viewer-content';
   panel.setAttribute('aria-label',`${n.title} 학습 내용 중앙 확대 보기`);
   panel.innerHTML=`<div class="viewer-content-label">${esc(n.title)} <span>↗ 클릭하여 확대</span></div>${n.content?`<div class="viewer-content-text">${esc(n.content)}</div>`:'<div class="viewer-content-text">등록된 학습 내용이 없습니다.</div>'}${n.image?`<img src="${n.image}" alt="첨부 이미지">`:''}`;
-  panel.onclick=expandViewerContent;
+  panel.onclick=e=>{if(e.target.closest('img'))expandViewerImage();else expandViewerContent()};
   document.getElementById('main').append(panel);
 }
 async function enterViewer(){
