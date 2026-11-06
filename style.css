@@ -61,3 +61,9 @@ body.viewer-mode{background:#0c1728}
 .viewer-mode .map .node.level-1{background:#137f80;border-color:#4da9a6;color:#fff}
 .viewer-mode .map .node.level-2{background:#7655a5;border-color:#a08ac5;color:#fff}
 .viewer-mode .map .node.level-3{background:#a96836;border-color:#d2986a;color:#fff}
+
+/* v5: viewer nodes must retain their level colors even when older rules override them */
+body.viewer-mode #map button.node.level-0{background-color:#375d91!important;border-color:#6488ba!important;color:#fff!important}
+body.viewer-mode #map button.node.level-1{background-color:#137f80!important;border-color:#4da9a6!important;color:#fff!important}
+body.viewer-mode #map button.node.level-2{background-color:#7655a5!important;border-color:#a08ac5!important;color:#fff!important}
+body.viewer-mode #map button.node.level-3{background-color:#a96836!important;border-color:#d2986a!important;color:#fff!important}
