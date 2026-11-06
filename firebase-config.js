@@ -11,4 +11,4 @@ export const firebaseConfig = {
 
 // Firebase Authentication에서 생성한 본인 계정의 UID를 입력합니다.
 // UID는 다음 단계에서 확인할 예정입니다.
-export const OWNER_UID = "REPLACE_WITH_YOUR_UID";
+export const OWNER_UID = "qIRSXfvDgERY7UXpICo4MOXh3Vn2";
