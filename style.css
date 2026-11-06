@@ -47,3 +47,17 @@ body.viewer-mode{background:#0c1728}
 .viewer-image-dialog img{display:block;max-width:92vw;max-height:83vh;width:auto;height:auto;object-fit:contain;border-radius:12px;box-shadow:0 25px 90px #000a}
 .viewer-image-close{position:absolute;right:0;top:-48px;background:#1b3558}
 .viewer-image-title{color:#f7f4ed;font-weight:700;font-size:18px;text-align:center}
+
+/* v4: 학습 계층을 제목만 표시하는 색상으로 구분 */
+.map .node.level-0{background:#375d91;border-color:#6488ba;color:#fff}
+.map .node.level-1{background:#137f80;border-color:#4da9a6;color:#fff}
+.map .node.level-2{background:#7655a5;border-color:#a08ac5;color:#fff}
+.map .node.level-3{background:#a96836;border-color:#d2986a;color:#fff}
+/* 선택된 노드는 원래 계층 색을 유지하면서 테두리로 강조 */
+.map .node.is-selected{outline:3px solid #e9c77e;outline-offset:3px;box-shadow:0 0 0 6px #e9c77e33,0 12px 30px #0004}
+.map .node.level-0:hover,.map .node.level-1:hover,.map .node.level-2:hover,.map .node.level-3:hover{filter:brightness(1.14)}
+/* 촬영용 뷰어에서도 동일한 색상 사용 */
+.viewer-mode .map .node.level-0{background:#375d91;border-color:#6488ba;color:#fff}
+.viewer-mode .map .node.level-1{background:#137f80;border-color:#4da9a6;color:#fff}
+.viewer-mode .map .node.level-2{background:#7655a5;border-color:#a08ac5;color:#fff}
+.viewer-mode .map .node.level-3{background:#a96836;border-color:#d2986a;color:#fff}
