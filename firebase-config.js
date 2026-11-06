@@ -1,12 +1,14 @@
-// Firebase 콘솔 > 프로젝트 설정 > 내 앱 > 웹 앱의 구성값으로 교체하세요.
+
 export const firebaseConfig = {
-  apiKey: 'REPLACE_ME',
-  authDomain: 'REPLACE_ME.firebaseapp.com',
-  projectId: 'REPLACE_ME',
-  storageBucket: 'REPLACE_ME.firebasestorage.app',
-  messagingSenderId: 'REPLACE_ME',
-  appId: 'REPLACE_ME'
+  apiKey: "AIzaSyCbA8STqD6lzSG0KZyXDGRbAbwU0u8ors0",
+  authDomain: "tax-academics-study-lab.firebaseapp.com",
+  projectId: "tax-academics-study-lab",
+  storageBucket: "tax-academics-study-lab.firebasestorage.app",
+  messagingSenderId: "527190112290",
+  appId: "1:527190112290:web:30d7a5ec6c4d677feaf27b",
+  measurementId: "G-536BPN87CL"
 };
-// Firebase Authentication > 사용자 > UID를 입력하세요. 빈 문자열이면 로그인은 가능하지만
-// Firestore/Storage 보안 규칙에서 UID를 제한해야만 개인 전용으로 안전합니다.
-export const OWNER_UID = 'REPLACE_WITH_YOUR_UID';
+
+// Firebase Authentication에서 생성한 본인 계정의 UID를 입력합니다.
+// UID는 다음 단계에서 확인할 예정입니다.
+export const OWNER_UID = "REPLACE_WITH_YOUR_UID";
